@@ -1,0 +1,60 @@
+﻿
+@model IEnumerable<BankMVCWeb.Models.Operations>
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Amount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OperationTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OutID)
+        </th>
+
+        <th> @Html.DisplayNameFor(card=>card.Card.Ballance)</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @if (item.OutID==ViewBag.Card)
+             {
+                    <label>-</label> @Html.DisplayFor(modelItem => item.Amount)
+             }
+           else
+            {
+                     <label>+</label> @Html.DisplayFor(modelItem => item.Amount)
+            }
+
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OperationTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Card.CadrID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Card1.CadrID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Card.Ballance)
+        </td>
+
+    </tr>
+}
+
+</table>
+<div>  @Html.ActionLink("Money ","Ballance","Operations")  </div>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d2a9b80db7e84ef3951a3387bf6a09ea" Name="Diagram1" ZoomLevel="86">
+        <EntityTypeShape EntityType="Bank1Model.Addresses" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Bank1Model.Card" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="Bank1Model.Clients" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Bank1Model.Operations" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
+        <AssociationConnector Association="Bank1Model.FK_Addresses_Clients" ManuallyRouted="false" />
+        <AssociationConnector Association="Bank1Model.FK_Card_Clients" ManuallyRouted="false" />
+        <AssociationConnector Association="Bank1Model.FK_Operations_Card" ManuallyRouted="false" />
+        <AssociationConnector Association="Bank1Model.FK_Operations_OUT" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
